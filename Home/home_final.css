@@ -7,6 +7,11 @@
   color: #fff;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 h1 {
   font-family: "Montserrat-Black", sans-serif;
   font-size: 1rem;
