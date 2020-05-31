@@ -1,0 +1,560 @@
+:root {
+  --main-blue: #002c42;
+}
+
+#title {
+  background-color: #002c42;
+  color: #fff;
+}
+
+h1 {
+  font-family: "Montserrat-Black", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+body {
+  font-family: "Montserrat-Black", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*Navbar style*/
+
+#header1 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar {
+  padding: 50px 0;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-brand {
+  color: #dcdde1;
+}
+
+.nav-item {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-item .nav-link:hover {
+  /*background: #dcdde1;*/
+  /*color: #262626;*/
+}
+
+/*responsive navbar*/
+
+.main {
+  position: relative;
+  background-image: url("assets/images/landing-back.jpg");
+  min-height: 100vh;
+  max-height: 105vh;
+  background-size: cover;
+  background-position: center;
+  padding: 220px 0 200px;
+}
+
+#landing {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+  width: 100%;
+  height: 100%;
+}
+
+#landing-front {
+  display: block;
+  height: 35%;
+  width: 60%;
+  padding-top: 5%;
+  margin: auto;
+  position: relative;
+  bottom: 100px;
+}
+
+#landing-subtitle {
+  display: block;
+  height: 30%;
+  width: 40%;
+  margin: auto;
+  position: relative;
+  bottom: 100px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 851px) {
+  #landing-front {
+    display: block;
+    height: auto;
+    width: auto;
+    padding-top: 10%;
+  }
+
+  #landing-subtitle {
+    display: block;
+    height: 40vh;
+    width: 80vw;
+  }
+
+  /*last section responsive*/
+  #membership {
+    display: none;
+  }
+}
+
+#features {
+  padding: 7% 15%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+h3 {
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+.quote {
+  color: #8f8f8f;
+}
+
+.icon {
+  color: #002c42;
+
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #0d2f40;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+body {
+  color: #c2c1c2;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  padding: 1em;
+}
+
+#slider-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 
+  About Us Section with Stats
+*/
+#about-us {
+  background-size: cover;
+  background-color: #002c42;
+  background-repeat: no-repeat;
+  padding: 5vh 6vw;
+  color: white;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+#about-us-header {
+  grid-column: 1/2;
+}
+#about-us-text {
+  padding: 0;
+  margin: 2vh 0 0 0;
+  grid-column: 1/2;
+}
+#stat-wrapper {
+  text-align: center;
+}
+
+.stat {
+  text-align: left;
+  padding: 0 5vw;
+
+  grid-column: 2/2;
+}
+.stat > h5 {
+  margin: 0;
+  font-size: 1em;
+  margin-bottom: 1vh;
+}
+.stat > div {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 3vh;
+  padding: 0;
+}
+
+.stat-value {
+  background-color: rgb(172, 175, 170);
+  text-align: right;
+  line-height: 100%;
+  font-size: 0.8em;
+  padding: 6px;
+}
+#country-stat {
+  width: 86%;
+}
+#LC-stat {
+  width: 75%;
+}
+
+/* 
+    About Us Mobile View 
+*/
+@media only screen and (max-width: 768px) {
+  #about-us {
+    display: block;
+    text-align: center;
+  }
+  #about-us-text {
+    margin: 4vh 0 0 0;
+  }
+  #stat-wrapper {
+    margin-top: 3vh;
+  }
+}
+
+figure {
+  position: absolute;
+  width: 400%;
+  left: 0;
+  animation: 20s slider infinite;
+  -webkit-animation: 20s slider infinite;
+  border-top: 1px solid #c2c1c2;
+  border-bottom: 1px solid #c2c1c2;
+  margin: 0;
+}
+
+blockquote {
+  width: 25%;
+  margin: 0;
+  float: left;
+  padding-bottom: 1em;
+}
+
+@-webkit-keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateX(-25%);
+  }
+  58% {
+    transform: translateX(-25%);
+  }
+  66% {
+    transform: translateX(-50%);
+  }
+  91% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateX(-25%);
+  }
+  58% {
+    transform: translateX(-25%);
+  }
+  66% {
+    transform: translateX(-50%);
+  }
+  91% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
+footer {
+  padding: 1em;
+  float: right;
+  margin-right: 2em;
+}
+
+@media (min-width: 750px) {
+  #testimonials {
+    height: 150px;
+  }
+}
+#testimonials {
+  text-align: center;
+  background-color: #002c42;
+  color: #fff;
+}
+
+h2 {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#press {
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 20px 50px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+#membership {
+  background-color: #002c42;
+}
+
+.O-I-button {
+  margin: 5% 3% 5% 0;
+}
+
+#membership #header-1 {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+  padding: 30px;
+}
+
+#membership #header-2 {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 50px 0px;
+}
+
+#membership #header-2 img {
+  padding: 20px;
+}
+
+#membership #iaeste-india {
+  height: 60px;
+}
+
+#membership #line {
+  background-color: #ffffff;
+  margin: auto 50px;
+  height: 60px;
+  width: 3px;
+}
+
+#membership #exchange-year {
+  margin: 20px;
+  height: 30px;
+}
+
+#membership #body {
+  background-color: x;
+  padding: 30px auto;
+  z-index: 0;
+}
+
+#membership #body #back {
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  margin: 20px;
+  z-index: 1;
+}
+
+#membership {
+  z-index: 1;
+  padding: 25px;
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Avenir";
+}
+
+#membership #stats {
+  z-index: 1;
+  display: grid;
+  color: #ffffff;
+  font-family: "Avenir";
+  text-align: center;
+  grid-template-columns: auto auto auto auto;
+  padding-bottom: 10px;
+}
+#membership #stats div {
+  margin-bottom: 40px;
+}
+#membership #stats h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+}
+
+#membership #stats p {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
+.abc {
+  position: relative;
+  left: 40px;
+}
+
+/* Responsive */
+
+.MobileMembership {
+  padding: 7% 15%;
+  background-color: #002c42;
+  position: relative;
+  z-index: 1;
+}
+
+.box {
+  text-align: center;
+  padding: 5%;
+}
+
+@media screen and (min-width: 851px) and (max-width: 3000px) {
+  .box {
+    display: none;
+  }
+
+  .MobileMembership {
+    display: none;
+  }
+}
+
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+.footer_text {
+  font-size: 1rem;
+}
+
+.figures {
+  font-size: 1.5rem;
+}
+
+/* unvisited link */
+a:link {
+  color: #fff;
+}
+
+/* visited link */
+a:visited {
+  color: #fff;
+}
+
+.figures {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.figuresText {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.logo {
+  height: 50px;
+  width: 200px;
+}
+
+.IECSE-credits {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(31, 31, 31);
+	text-align: center;
+	font-size: 3vh;
+	color: white;
+	word-spacing: 10% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	word-spacing: 10px;
+}
+
+.heart {
+	width: 2.5vh;
+	animation: .8s infinite beatHeart;
+}
+
+.iecse-logo {
+    width: 11vh;
+}
+
+@keyframes beatHeart {
+	0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}

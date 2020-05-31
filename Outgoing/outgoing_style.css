@@ -1,0 +1,455 @@
+:root {
+  --main-blue: #002c42;
+  --font-blue: #002c42;
+  --map-gradient-inner: #16c6ee;
+  --map-gradient-outer: #002385;
+  --hover-colour: white;
+  --list-dropdown: #003d5c;
+  --section-header: 600;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat-Black", sans-serif;
+  width: 100%;
+  background-color: var(--main-blue);
+  color: white;
+}
+
+section {
+  padding: 4vh 5vw;
+}
+h3 {
+  margin-bottom: 20px;
+}
+/* TitleSection */
+
+#title {
+  color: #fff;
+  padding: 0;
+  background: #1d1e23;
+}
+
+.container-fluid {
+  padding: 3% 5% 3% 5%;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-family: "ubuntu";
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-item {
+  padding: 0 3px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light", sans-serif;
+}
+
+.title-image {
+  width: 60%;
+  position: absolute;
+  right: 20%;
+}
+
+.logo {
+  height: 60px;
+  width: 200px;
+}
+
+/* 
+  Overview
+*/
+
+#overview {
+  color: white;
+  background: #1d1e23;
+  background-image: url("./landing.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 4vh 5vw;
+  margin: 3vh 0 0 0;
+}
+
+#overview-content {
+  grid-column: 1/2;
+}
+#overview-content > h3 {
+  margin-bottom: 20px;
+  font-weight: var(--section-header);
+}
+#overview-content > p {
+  backdrop-filter: blur(1px);
+  background-clip: content-box;
+}
+@media only screen and (max-width: 768px) {
+  #overview {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*
+How to Apply
+*/
+#how-to-apply {
+  background-image: url("./SecondSection.jpg");
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+#how-to-apply-header {
+  margin-bottom: 4vh;
+  font-weight: var(--section-header);
+  text-align: center;
+}
+#step-wise-guide {
+  margin: 10px 0;
+}
+#stepwise-list {
+  margin-top: 3vh;
+}
+
+/* 
+  Testimonial Section -------------> 
+*/
+
+#testimonial-section {
+  padding: 4vh 1vw;
+  text-align: center;
+}
+#testimonial-section > h3 {
+  padding: 0 4vw;
+  font-weight: var(--section-header);
+}
+
+#testimonials {
+  min-height: 30vh;
+  padding: 1vh 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.testimonial-wrapper {
+  width: 90%;
+  margin: auto;
+  display: none;
+}
+.quote {
+  color: #8f8f8f;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+#carousel-dot-container {
+  margin-top: 30px;
+}
+.carousel-dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.carousel-dot:hover {
+  background-color: #717171;
+}
+/* 
+  Rules and Regulations 
+*/
+#rules-regulations {
+  user-select: none;
+  background-color: white;
+  color: var(--main-blue);
+}
+
+#rules-header {
+  /* font-size: 1.4em; */
+  font-weight: var(--section-header);
+  margin: 0;
+  text-align: center;
+}
+#rules-content {
+  margin-top: 7vh;
+}
+
+.plus:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  float: right;
+  text-decoration: none;
+}
+.minus:after {
+  content: "\f068";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  float: right;
+  text-decoration: none;
+}
+
+#rules-content {
+  display: none;
+}
+
+#general-rules-header {
+  margin-top: 4vh;
+}
+#general-rules-list {
+  display: none;
+}
+/* 
+  Map Section 
+*/
+
+#map-header {
+  text-align: center;
+  padding: 4vh 4vw;
+  font-weight: var(--section-header);
+}
+#map-section {
+  text-align: center;
+  background-color: var(--main-blue);
+  color: #fff;
+  padding: 3vh 0 4vh 0;
+  margin: 0;
+  display: grid;
+  overflow: visible;
+
+  grid-template-columns: 40% 60%;
+}
+
+#world-map {
+  grid-row: 1;
+  grid-column: 2;
+  box-sizing: border-box;
+  padding: 0 min(10px, 3vw);
+  width: 60vw;
+  height: auto;
+  fill: url(#map-gradient) rgba(255, 255, 255, 0.651);
+}
+
+.land:hover {
+  cursor: pointer;
+}
+
+#info {
+  grid-column: 1;
+  grid-row: 1;
+  width: 40vw;
+  color: black;
+  position: relative;
+  min-height: 100%;
+  /* box-sizing: border-box; */
+  z-index: 200;
+}
+
+.continent-card {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  /* Initialised to none, toggles to display:flex once the appropriate continent is selected in outgoing.js */
+  display: none;
+  flex-direction: column;
+}
+
+.continent-name {
+  color: white;
+  /* margin: 2vh auto; */
+  display: block;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5em;
+  grid-row: 1;
+}
+
+.country-list {
+  grid-row: 1;
+  min-height: 100%;
+  /* height: 100%; */
+  color: black;
+
+  /* Columns are added to the 4 row structure. As number of columns increase, scroll horizontally */
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 0vh 1vw;
+  grid-auto-columns: 1fr;
+
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  z-index: 600;
+  padding-left: 1vw;
+}
+
+.country {
+  position: relative;
+
+  width: 19vw;
+  height: 60%;
+  margin: auto;
+
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country:hover {
+  border-radius: 4px 4px 0 0;
+  z-index: 15;
+}
+
+@media only screen and (max-width: 768px) {
+  #map-section {
+    display: block;
+  }
+
+  #world-map {
+    width: 80%;
+    margin: auto;
+  }
+
+  #info {
+    margin-top: 2vh;
+    width: 100%;
+  }
+
+  #continent-card {
+    grid-template-rows: 15% 85%;
+    overflow-y: visible;
+    min-height: 50vh;
+  }
+
+  .country-list {
+    grid-gap: 2vh 1vw;
+  }
+
+  .country {
+    width: 49vw;
+    min-height: 5vh;
+    font-size: 0.9em;
+  }
+}
+
+/* LC Card  */
+.LC-card {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 5%;
+
+  height: 100%;
+  width: 90%;
+
+  border-radius: 4px;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 900;
+  padding: 3vh 3vw;
+  color: black;
+}
+
+.list-item {
+  border-radius: 4px;
+}
+.list-item:hover {
+  background-color: rgb(218, 218, 218);
+  transition: 0.1s;
+}
+.card-close-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border-radius: 5%;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+  Once-you-return 
+*/
+#once-you-return-header {
+  text-align: center;
+  font-weight: var(--section-header);
+}
+
+/* 
+  Footer
+*/
+#footer {
+  padding: 2% 15%;
+  color: white;
+  background-color: var(--main-blue);
+  text-align: center;
+}
+
+.social-icon {
+  color: white;
+  margin: 20px 15px;
+}
+
+.footer_text {
+  font-size: 1rem;
+  color: #8f8f8f;
+}
+
+.figures {
+  font-size: 1.5rem;
+}
+
+#iecse_logo {
+  height: 0.9rem;
+  vertical-align: baseline;
+  margin-left: 2px;
+}
